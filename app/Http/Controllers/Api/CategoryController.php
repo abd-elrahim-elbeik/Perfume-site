@@ -17,13 +17,6 @@ class CategoryController extends Controller
         return response()->json($categories);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
@@ -31,23 +24,9 @@ class CategoryController extends Controller
     public function show(string $id)
     {
         $categories = Category::FindOrFail($id);
-        
+
         return response()->json($categories);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+   
 }

@@ -23,13 +23,6 @@ class ProductController extends Controller
         return view('pages.Products.Products', compact('products', 'categories'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -83,21 +76,6 @@ class ProductController extends Controller
         return redirect()->route('products.index');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
@@ -153,7 +131,7 @@ class ProductController extends Controller
         }
 
         $product->save();
-        
+
         toastr()->success(trans('messages.Update'));
         return redirect()->route('products.index');
     }
